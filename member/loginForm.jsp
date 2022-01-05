@@ -4,6 +4,22 @@
 <head>
 <meta charset="UTF-8">
 <title>loginForm</title>
+<script type="text/javascript">
+// 비어있는 값이 전달되면
+	function loginCheck(){
+		if(document.frm.userid.value == ""){
+			alert("아이디를 입력하세요");
+			document.frm.userid.focus();
+			return false;	
+		}
+		if(document.frm.pwd.value == ""){
+			alert("비밀번호를 입력하세요");
+			document.frm.pwd.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
 </head>
 <body>
 	<form action="login.do" method="post" name="frm">
@@ -18,9 +34,9 @@
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" value="로그인">
+					<input type="submit" value="로그인" onClick="return loginCheck()">
 					<input type="reset" value="취소">
-					<input type="button" value="회원가입">
+					<input type="button" value="회원가입" onClick="location.href='join.do'">
 				</td>
 			</tr>
 			<tr>
