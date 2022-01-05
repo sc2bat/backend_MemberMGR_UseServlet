@@ -16,5 +16,7 @@
 // 		response.sendRedirect("member/loginForm.jsp");			
 		response.sendRedirect("login.do");
 	%>
+	
+<!-- 시작은 인덱스에서 반드시 시작할것 -->
 </body>
 </html>
