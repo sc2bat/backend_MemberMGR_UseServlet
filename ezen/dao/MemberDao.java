@@ -56,7 +56,7 @@ public class MemberDao {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
-			if(rs.next()) {
+			while(rs.next()) {
 				mdto = new MemberDto();
 				mdto.setName(rs.getString("name"));
 				mdto.setUserid(rs.getString("userid"));
